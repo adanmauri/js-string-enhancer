@@ -17,8 +17,8 @@
  */
 
 String.prototype.union = function(anotherStr) {
-	tmpStr = this;
-	tmpAnotherStr = anotherStr;
+	var tmpStr = this;
+	var tmpAnotherStr = anotherStr;
 
 	if (tmpStr.length < tmpAnotherStr.length) {
 		tmpAnotherStr = tmpAnotherStr.substring(0,tmpStr.length);
@@ -33,11 +33,11 @@ String.prototype.union = function(anotherStr) {
 		tmpStr = tmpStr.substring(1,tmpStr.length);
 		tmpAnotherStr = tmpAnotherStr.substring(0,tmpAnotherStr.length-1);
 	} while (tmpStr.length > 0 & tmpAnotherStr.length > 0);
-	str = this + anotherStr.substring(tmpAnotherStr.length,anotherStr.length);
-	return str;
+	return this + anotherStr.substring(tmpAnotherStr.length,anotherStr.length);
 }
 
-String.prototype.replaceAll = function(origin, replacement) {
+String.prototype.replaceAll = function(searchvalue, newvalue) {
 	str = this;
-	return str.split(origin).join(replacement);
+	var re = new RegExp(searchvalue,"g");
+	return str.replace(re, newvalue);
 }
