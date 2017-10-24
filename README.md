@@ -1,5 +1,5 @@
 # What is JavaScript String Enhancer
-JS String Enhancer is a library that adds new methods to JavaScript's strings.
+JavaScript String Enhancer is a library that adds new methods to JavaScript's strings.
 
 ## union()
 ### Definition and Usage
