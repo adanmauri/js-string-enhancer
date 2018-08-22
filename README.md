@@ -32,7 +32,7 @@ The replaceAll() method searches a string, or a *regular expression*, for a spec
 
 ### Syntax
 ```js
-string.replace(searchvalue, newvalue)
+string.replaceAll(searchvalue, newvalue)
 ```
 
 ### Parameters values
